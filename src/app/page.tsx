@@ -34,14 +34,14 @@ export default function Home() {
       <Header />
 
       <Section>
-        <h2 className="text-xl font-semibold mb-2">A New Infrastructure for Trust-Based Trade</h2>
+        <h2 className="section-heading">A New Infrastructure for Trust-Based Trade</h2>
         <p>
           As centralized systems falter, FOAF helps communities exchange value directly. No banks. No middlemen. No cash required.
         </p>
       </Section>
 
       <Section>
-        <h2 className="text-xl font-semibold mb-2">What Is FOAF?</h2>
+        <h2 className="section-heading">What Is FOAF?</h2>
         <p>
           FOAF (Friend of a Friend) is a decentralized protocol for value exchange rooted in trust.
           It is not a marketplace or an app—it is the infrastructure that powers them.
@@ -50,8 +50,8 @@ export default function Home() {
       </Section>
 
       <Section>
-        <h2 className="text-xl font-semibold mb-2">How FOAF Works</h2>
-        <ul className="list-disc list-inside">
+        <h2 className="section-heading">How FOAF Works</h2>
+        <ul className="content-list">
           <li>Post something you offer or need</li>
           <li>It spreads through your contact network</li>
           <li>Credit flows across trust paths, and the app keeps track</li>
@@ -62,8 +62,8 @@ export default function Home() {
       </Section>
 
       <Section>
-        <h2 className="text-xl font-semibold mb-2">Why Now?</h2>
-        <ul className="list-disc list-inside">
+        <h2 className="section-heading">Why Now?</h2>
+        <ul className="content-list">
           <li>Rising costs and economic instability are pushing people to find alternatives</li>
           <li>Trust in institutions is eroding</li>
           <li>Volunteer-run exchange networks burn out and fade</li>
@@ -72,7 +72,7 @@ export default function Home() {
       </Section>
 
       <Section>
-        <h2 className="text-xl font-semibold mb-2">Why It Matters</h2>
+        <h2 className="section-heading">Why It Matters</h2>
         <p>
           FOAF turns goodwill and social capital into a usable economic layer.
           It lets us grow, share, and trade directly—without depending on fragile supply chains or extractive systems.
@@ -80,15 +80,15 @@ export default function Home() {
       </Section>
 
       <Section>
-        <h2 className="text-xl font-semibold mb-2">Our Mission</h2>
+        <h2 className="section-heading">Our Mission</h2>
         <p>
           To build an infrastructure of trust that empowers people to trade, thrive, and adapt—together.
         </p>
       </Section>
 
       <Section>
-        <h2 className="text-xl font-semibold mb-2">Who It’s For</h2>
-        <ul className="list-disc list-inside">
+        <h2 className="section-heading">Who It's For</h2>
+        <ul className="content-list">
           <li>Gardeners, makers, fixers, and doers</li>
           <li>People who want to help their communities stay resilient</li>
           <li>Anyone looking for ways to trade fairly and build lasting connections</li>
@@ -96,7 +96,7 @@ export default function Home() {
       </Section>
 
       <Section>
-        <h2 className="text-xl font-semibold mb-2">First Use Case: GrowOperative</h2>
+        <h2 className="section-heading">First Use Case: GrowOperative</h2>
         <p>
           GrowOperative is our first live deployment of the FOAF protocol.
           It helps gardeners and communities share surplus food through trust-based networks—no cash required.
@@ -105,13 +105,13 @@ export default function Home() {
           This is just the beginning. FOAF can support any kind of trade—tools, skills, services, and more.
         </p>
         <p className="mt-2">
-          <a href="/growoperative/" className="underline text-blue-400 hover:text-blue-200">Explore GrowOperative →</a>
+          <a href="/growoperative/" className="content-link">Explore GrowOperative →</a>
         </p>
       </Section>
 
       <Section>
-        <h2 className="text-xl font-semibold mb-2">Core Principles</h2>
-        <ul className="list-disc list-inside">
+        <h2 className="section-heading">Core Principles</h2>
+        <ul className="content-list">
           <li><strong>Local-first:</strong> Built for neighborhoods and bioregions</li>
           <li><strong>Consent-based visibility:</strong> Listings are visible only through direct or second-degree contacts</li>
           <li><strong>Credible neutrality:</strong> FOAF is infrastructure, not a brand or marketplace</li>
@@ -120,10 +120,10 @@ export default function Home() {
       </Section>
 
       <Section>
-        <h2 className="text-xl font-semibold mb-2">Get Started</h2>
-        <p><a href="/growoperative/" className="underline text-blue-400 hover:text-blue-200">Explore GrowOperative</a> — our first live application</p>
-        <p><a href="/tokens/" className="underline text-blue-400 hover:text-blue-200">Learn about FOAF and RHEO tokens</a> — governance and utility layers</p>
-        <p><a href="/whitepaper/" className="underline text-blue-400 hover:text-blue-200">Read the FOAF Whitepaper</a></p>
+        <h2 className="section-heading">Get Started</h2>
+        <p><a href="/growoperative/" className="content-link">Explore GrowOperative</a> — our first live application</p>
+        <p><a href="/tokens/" className="content-link">Learn about FOAF and RHEO tokens</a> — governance and utility layers</p>
+        <p><a href="/whitepaper/" className="content-link">Read the FOAF Whitepaper</a></p>
       </Section>
 
       <Footer />
