@@ -3,7 +3,7 @@ import Section from '@/components/Section';
 
 export default function TokenModelPage() {
   return (
-    <div className="px-6 max-w-3xl mx-auto text-foreground">
+    <>
       <Section>
         <h1 className="text-4xl font-bold mb-2">Token Model</h1>
         <p className="text-lg text-muted-foreground">
@@ -83,6 +83,6 @@ export default function TokenModelPage() {
           incentives will align them toward staking, contribution, and DAO participation.
         </p>
       </Section>
-    </div>
+    </>
   );
 }

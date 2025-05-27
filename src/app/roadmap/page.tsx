@@ -3,7 +3,7 @@ import Section from '@/components/Section';
 
 export default function RoadmapPage() {
   return (
-    <div className="px-6 max-w-3xl mx-auto text-foreground">
+    <>
       <Section>
         <h1 className="text-4xl font-bold mb-2">Roadmap</h1>
         <p className="text-lg text-muted-foreground">
@@ -30,6 +30,6 @@ export default function RoadmapPage() {
           </li>
         </ul>
       </Section>
-    </div>
+    </>
   );
 }

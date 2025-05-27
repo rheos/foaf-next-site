@@ -3,7 +3,7 @@ import Section from '@/components/Section';
 
 export default function GrowOperativePage() {
   return (
-    <div className="px-6 max-w-3xl mx-auto text-foreground">
+    <>
       <Section>
         <h1 className="text-4xl font-bold mb-2">GrowOperative</h1>
         <p className="text-lg text-muted-foreground">
@@ -122,6 +122,6 @@ export default function GrowOperativePage() {
           <li><strong>Unlike delivery platforms:</strong> There are no middlemen. Fulfillment is peer to peer, and reputation builds from usage</li>
         </ul>
       </Section>
-    </div>
+    </>
   );
 }

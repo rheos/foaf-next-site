@@ -53,6 +53,16 @@ export default function Nav() {
     };
   }, []);
 
+  // Close mobile menu when a menu item is clicked
+  const handleMenuItemClick = () => {
+    if (typeof window !== 'undefined' && window.innerWidth <= 768) {
+      const menu = document.getElementById("menu");
+      if (menu && menu.classList.contains("open")) {
+        menu.classList.remove("open");
+      }
+    }
+  };
+
   return (
     <nav className="text-[hsl(var(--nav-header-foreground))]">
       <div className="nav-container relative">
@@ -65,12 +75,12 @@ export default function Nav() {
           {isDay ? '🌙' : '☀️'}
         </button>
         <ul id="menu">
-          <li><Link href="/">Home</Link></li>
-          <li><Link href="/growoperative/">GrowOperative</Link></li>
-          <li><Link href="/tokens/">Token Model</Link></li>
-          <li><Link href="/whitepaper/">Whitepaper</Link></li>
-          <li><Link href="/roadmap/">Roadmap</Link></li>
-          <li><Link href="/get-involved/">Get Involved</Link></li>
+          <li><Link href="/" onClick={handleMenuItemClick}>Home</Link></li>
+          <li><Link href="/growoperative/" onClick={handleMenuItemClick}>GrowOperative</Link></li>
+          <li><Link href="/tokens/" onClick={handleMenuItemClick}>Token Model</Link></li>
+          <li><Link href="/whitepaper/" onClick={handleMenuItemClick}>Whitepaper</Link></li>
+          <li><Link href="/roadmap/" onClick={handleMenuItemClick}>Roadmap</Link></li>
+          <li><Link href="/get-involved/" onClick={handleMenuItemClick}>Get Involved</Link></li>
         </ul>
       </div>
     </nav>

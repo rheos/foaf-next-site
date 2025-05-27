@@ -4,7 +4,7 @@ import Section from '../components/Section';
 
 export default function Home() {
   return (
-    <main className="max-w-3xl mx-auto px-4 py-10">
+    <>
       <Section>
         <h2 className="section-heading">A New Infrastructure for Trust-Based Trade</h2>
         <p>
@@ -97,6 +97,6 @@ export default function Home() {
         <p><a href="/tokens/" className="content-link">Learn about FOAF and RHEO tokens</a> — governance and utility layers</p>
         <p><a href="/whitepaper/" className="content-link">Read the FOAF Whitepaper</a></p>
       </Section>
-    </main>
+    </>
   );
 }

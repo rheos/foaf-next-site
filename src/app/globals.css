@@ -24,6 +24,14 @@
   a {
     @apply text-blue-400 hover:text-blue-200 transition-colors;
   }
+
+  p {
+    @apply mb-5;
+  }
+
+  ul:not(#menu) {
+    @apply list-disc list-outside pl-6;
+  }
 }
 
 /* Custom component styles */
@@ -99,7 +107,7 @@
       display: flex;
     }
     #menu {
-      @apply hidden flex-col w-full mt-0 bg-background shadow-2xl border border-foreground/10 rounded-b-lg whitespace-normal absolute left-0 right-0 top-full z-50;
+      @apply hidden flex-col w-full mt-0 bg-[hsl(var(--nav-header-bg))] text-[hsl(var(--nav-header-foreground))] shadow-2xl border border-foreground/10 rounded-b-lg whitespace-normal absolute left-0 right-0 top-full z-50;
     }
     #menu.open {
       @apply flex;

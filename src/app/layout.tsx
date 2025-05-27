@@ -14,7 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-screen bg-background text-foreground">
         <Nav />
         <Header />
-        <main className="mt-8">
+        <main className="max-w-3xl mx-auto px-4 py-10 mt-8">
           {children}
         </main>
         <Footer />
