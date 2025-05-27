@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import Link from 'next/link';
 
 export default function Nav() {
   useEffect(() => {
@@ -29,14 +30,16 @@ export default function Nav() {
       <div className="nav-container">
         <button id="menu-toggle" aria-label="Toggle menu">&#9776;</button>
         <ul id="menu">
-          <li><a href="/">Home</a></li>
-          <li><a href="/growoperative/">GrowOperative</a></li>
-          <li><a href="/tokens/">Token Model</a></li>
-          <li><a href="/whitepaper/">Whitepaper</a></li>
-          <li><a href="/roadmap/">Roadmap</a></li>
-          <li><a href="/get-involved/">Get Involved</a></li>
+          <li><Link href="/">Home</Link></li>
+          <li><Link href="/growoperative/">GrowOperative</Link></li>
+          <li><Link href="/tokens/">Token Model</Link></li>
+          <li><Link href="/whitepaper/">Whitepaper</Link></li>
+          <li><Link href="/roadmap/">Roadmap</Link></li>
+          <li><Link href="/get-involved/">Get Involved</Link></li>
         </ul>
       </div>
     </nav>
   );
 }
+
+
