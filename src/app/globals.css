@@ -8,10 +8,17 @@
     --background: 215 64% 16%;
     --foreground: 0 0% 88%;
     --nav-header-bg: 210 69% 13%;
+    --nav-header-foreground: 0 0% 88%;
   }
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  body.theme-day {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    /* nav-header-bg remains unchanged for nav/header/footer */
   }
 
   a {
@@ -48,11 +55,11 @@
     @apply fixed top-0 left-0 right-0 bg-[hsl(var(--nav-header-bg))] backdrop-blur-sm border-b border-foreground/10 z-50;
   }
   header {
-    @apply bg-[hsl(var(--nav-header-bg))] py-8 px-4 mb-8 pt-16;
+    @apply text-[hsl(var(--nav-header-foreground))] bg-[hsl(var(--nav-header-bg))] py-8 px-4 mb-8 pt-16;
     margin-top: 0 !important;
   }
-  header > *:first-child {
-    margin-top: 0 !important;
+  nav, nav *:not(.theme-toggle), header, header * {
+    color: hsl(var(--nav-header-foreground)) !important;
   }
 
   @media (min-width: 769px) {

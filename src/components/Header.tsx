@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Header() {
   return (
-    <header className="mb-8 mt-12">
+    <header className="text-[hsl(var(--nav-header-foreground))] mb-8 mt-12">
       <div className="flex items-center justify-center gap-4 md:-ml-[35px]">
         <Image
           src="/logo.png"

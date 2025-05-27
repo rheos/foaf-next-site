@@ -1,9 +1,37 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 export default function Nav() {
+  const [isDay, setIsDay] = useState(false);
+
+  // On mount, check localStorage for theme
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const theme = localStorage.getItem('theme');
+      if (theme === 'day') {
+        document.body.classList.add('theme-day');
+        setIsDay(true);
+      }
+    }
+  }, []);
+
+  // Toggle theme
+  const toggleTheme = () => {
+    if (typeof window !== 'undefined') {
+      if (isDay) {
+        document.body.classList.remove('theme-day');
+        localStorage.setItem('theme', 'night');
+        setIsDay(false);
+      } else {
+        document.body.classList.add('theme-day');
+        localStorage.setItem('theme', 'day');
+        setIsDay(true);
+      }
+    }
+  };
+
   useEffect(() => {
     const toggle = document.getElementById("menu-toggle");
     const menu = document.getElementById("menu");
@@ -26,9 +54,16 @@ export default function Nav() {
   }, []);
 
   return (
-    <nav>
-      <div className="nav-container">
+    <nav className="text-[hsl(var(--nav-header-foreground))]">
+      <div className="nav-container relative">
         <button id="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+        <button
+          className="absolute right-4 top-1/2 -translate-y-1/2 text-2xl md:right-8 bg-transparent border-none cursor-pointer select-none"
+          aria-label="Toggle theme"
+          onClick={toggleTheme}
+        >
+          {isDay ? '🌙' : '☀️'}
+        </button>
         <ul id="menu">
           <li><Link href="/">Home</Link></li>
           <li><Link href="/growoperative/">GrowOperative</Link></li>
