@@ -28,11 +28,10 @@ export default function Home() {
   }, []);
 
   return (
-    <main>
+    <main className="content-container">
       <Nav />
       <Header />
 
-      <div className="content-container">
       
       <section>
         <h2>A New Infrastructure for Trust-Based Trade</h2>
@@ -128,7 +127,7 @@ export default function Home() {
         <p><a href="/whitepaper/">Read the FOAF Whitepaper</a></p>
       </section>
       
-      </div>
+   
 
       <Footer />
     
