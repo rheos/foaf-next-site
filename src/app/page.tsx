@@ -32,6 +32,8 @@ export default function Home() {
       <Nav />
       <Header />
 
+      <div className="content-container">
+      
       <section>
         <h2>A New Infrastructure for Trust-Based Trade</h2>
         <p className="subheader">
@@ -125,8 +127,11 @@ export default function Home() {
         <p><a href="/tokens/">Learn about FOAF and RHEO tokens</a> — governance and utility layers</p>
         <p><a href="/whitepaper/">Read the FOAF Whitepaper</a></p>
       </section>
+      
+      </div>
 
       <Footer />
+    
     </main>
   );
 }
