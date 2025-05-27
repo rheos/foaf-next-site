@@ -12,7 +12,7 @@ export default function TokenModelPage() {
       </Section>
 
       <Section>
-        <h2 className="text-2xl font-semibold mb-2">FOAF Token</h2>
+        <h2 className="section-heading">FOAF Token</h2>
         <p className="mb-4">
           FOAF is a fixed-supply, indivisible token that anchors long-term participation and governance.
           It is not used for direct payments, but must be staked to mint RHEO. Holding FOAF gives
@@ -27,7 +27,7 @@ export default function TokenModelPage() {
       </Section>
 
       <Section>
-        <h2 className="text-2xl font-semibold mb-2">RHEO Token</h2>
+        <h2 className="section-heading">RHEO Token</h2>
         <p className="mb-4">
           RHEO is a divisible utility token minted by staking FOAF. It is used for transaction fees,
           routing incentives, and credit signaling. Most users will never need to hold RHEO directly — it
@@ -46,7 +46,7 @@ export default function TokenModelPage() {
       </Section>
 
       <Section>
-        <h2 className="text-2xl font-semibold mb-2">Transaction Fees and Routing</h2>
+        <h2 className="section-heading">Transaction Fees and Routing</h2>
         <p className="mb-4">
           Fees are paid in RHEO at the time of transaction. These include:
         </p>
@@ -61,7 +61,7 @@ export default function TokenModelPage() {
       </Section>
 
       <Section>
-        <h2 className="text-2xl font-semibold mb-2">Token Allocation</h2>
+        <h2 className="section-heading">Token Allocation</h2>
         <p className="mb-4">The 25 million FOAF tokens are pre-allocated as follows:</p>
         <ul className="list-disc list-inside space-y-2">
           <li><strong>Seed Round:</strong> 5,000,000 FOAF (20%)</li>
@@ -75,7 +75,7 @@ export default function TokenModelPage() {
       </Section>
 
       <Section>
-        <h2 className="text-2xl font-semibold mb-2">Onboarding and Adoption</h2>
+        <h2 className="section-heading">Onboarding and Adoption</h2>
         <p>
           FOAF and RHEO are introduced gradually, starting with regional airdrops and explainer content.
           Most early users will not need wallets or technical knowledge. Token logic flows behind the

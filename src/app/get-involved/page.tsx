@@ -12,7 +12,7 @@ export default function GetInvolvedPage() {
       </Section>
 
       <Section>
-        <h2 className="text-2xl font-semibold mb-2">Support the Mission</h2>
+        <h2 className="section-heading">Support the Mission</h2>
         <p className="mb-4">
           FOAF Foundation is seeking aligned partners and early-stage funders who share our belief
           that local resilience, peer-to-peer infrastructure, and mutual credit systems are essential
@@ -28,7 +28,7 @@ export default function GetInvolvedPage() {
       </Section>
 
       <Section>
-        <h2 className="text-2xl font-semibold mb-2">Contact & Collaboration</h2>
+        <h2 className="section-heading">Contact & Collaboration</h2>
         <p className="mb-2">
           If you're interested in supporting our work, piloting a local implementation, or collaborating
           in any capacity, please reach out:

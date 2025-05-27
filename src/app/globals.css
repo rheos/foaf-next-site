@@ -18,7 +18,6 @@
   body.theme-day {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
-    /* nav-header-bg remains unchanged for nav/header/footer */
   }
 
   a {
@@ -37,7 +36,7 @@
 /* Custom component styles */
 @layer components {
   .section-heading {
-    @apply text-xl font-semibold mb-2;
+    @apply text-2xl font-semibold mb-4;
   }
 
   .content-list {
@@ -48,8 +47,16 @@
     @apply underline text-blue-400 hover:text-blue-200 transition-colors;
   }
 
-  /* Navigation styles */
-  nav, header {
+  .badge-list {
+    @apply list-decimal pl-5 mt-6;
+  }
+
+  .badge-list li {
+    @apply mb-8 pl-2;
+  }
+
+  nav,
+  header {
     display: block;
     width: 100vw;
     margin-left: calc(50% - 50vw);
@@ -59,14 +66,20 @@
     margin-top: 0 !important;
     margin-bottom: 0 !important;
   }
+
   nav {
     @apply fixed top-0 left-0 right-0 bg-[hsl(var(--nav-header-bg))] backdrop-blur-sm border-b border-foreground/10 z-50;
   }
+
   header {
     @apply text-[hsl(var(--nav-header-foreground))] bg-[hsl(var(--nav-header-bg))] py-8 px-4 mb-8 pt-16;
     margin-top: 0 !important;
   }
-  nav, nav *:not(.theme-toggle), header, header * {
+
+  nav,
+  nav *:not(.theme-toggle),
+  header,
+  header * {
     color: hsl(var(--nav-header-foreground)) !important;
   }
 
@@ -106,12 +119,15 @@
       @apply block;
       display: flex;
     }
+
     #menu {
       @apply hidden flex-col w-full mt-0 bg-[hsl(var(--nav-header-bg))] text-[hsl(var(--nav-header-foreground))] shadow-2xl border border-foreground/10 rounded-b-lg whitespace-normal absolute left-0 right-0 top-full z-50;
     }
+
     #menu.open {
       @apply flex;
     }
+
     #menu li {
       @apply pl-6 py-3 text-lg;
     }
@@ -122,14 +138,23 @@
       @apply hidden;
       display: none;
     }
+
     #menu {
       @apply flex flex-row justify-center static bg-transparent shadow-none border-none rounded-none !important;
       display: flex !important;
     }
+
     #menu li {
       @apply mx-4 border-none bg-transparent p-0 pl-0 py-0 text-base;
     }
   }
+}
+
+/* Raw CSS for ::marker (Tailwind @apply doesn't support it) */
+.badge-list li::marker {
+  font-weight: 600;
+  font-size: 1rem;
+  color: hsl(217, 91%, 60%); /* Tailwind blue-400 in HSL */
 }
 
 /* Custom utility styles */
