@@ -5,8 +5,8 @@
 /* Custom base styles */
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 214 41% 15%;
+    --foreground: 0 0% 88%;
   }
 
   body {
@@ -33,37 +33,42 @@
   }
 
   /* Navigation styles */
+  nav {
+    @apply bg-background/95 backdrop-blur-sm border-b border-foreground/10 z-50 w-full;
+  }
+
+  @media (min-width: 769px) {
+    nav {
+      @apply fixed top-0 left-0 right-0;
+    }
+  }
+
+  .nav-container {
+    @apply max-w-3xl mx-auto px-4 py-4 flex items-center justify-between;
+  }
+
   #menu-toggle {
-    @apply hidden text-2xl bg-transparent border-none text-blue-200 cursor-pointer;
+    @apply hidden text-3xl bg-transparent border-none text-blue-200 cursor-pointer p-2 rounded-md hover:bg-blue-900 transition;
   }
 
   #menu {
-    @apply flex list-none p-0 m-0 transition-all duration-300 ease-in-out;
+    @apply flex list-none p-0 m-0 transition-all duration-300 ease-in-out whitespace-nowrap bg-transparent shadow-none border-none static;
   }
 
   #menu li {
-    @apply mx-2;
+    @apply mx-4 border-none bg-transparent p-0;
+  }
+
+  #menu a {
+    @apply text-foreground hover:text-blue-200 transition-colors;
   }
 
   @media (max-width: 768px) {
-    #menu-toggle {
-      @apply block;
-    }
-
-    nav .nav-container {
-      @apply flex-col items-start;
-    }
-
     #menu {
-      @apply hidden flex-col w-full mt-4;
+      @apply hidden flex-col w-full mt-0 bg-background shadow-2xl border border-foreground/10 rounded-b-lg whitespace-normal absolute left-0 right-0 top-full z-50;
     }
-
     #menu.open {
       @apply flex;
-    }
-
-    #menu li {
-      @apply my-2 mx-4;
     }
   }
 
@@ -71,13 +76,11 @@
     nav .nav-container {
       @apply flex-row items-center;
     }
-
     #menu {
-      @apply flex !important flex-row justify-center;
+      @apply flex-row justify-center static bg-transparent shadow-none border-none rounded-none;
     }
-
     #menu li {
-      @apply mx-2;
+      @apply mx-4 border-none bg-transparent p-0;
     }
   }
 }
