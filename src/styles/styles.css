@@ -1,0 +1,254 @@
+body {
+  margin: 0;
+  font-family: Helvetica, 'Segoe UI', Roboto, Arial, sans-serif;
+  background: #0F2B44;
+  color: #e0e0e0;
+  font-size: 1.15rem;
+  line-height: 1.9;
+}
+
+header {
+  background: #0B2237;
+  color: #fff;
+  padding: 4rem 1rem 2.5rem 1rem;
+  text-align: center;
+  margin-top: 0;
+}
+
+header h1 {
+  margin: 0 0 0 -35px;
+  font-size: 3rem;
+  letter-spacing: 0.06rem;
+}
+
+header p {
+  margin-top: 1rem;
+  font-size: 1.35rem;
+  color: #ccc;
+}
+
+nav {
+  background: #0B2237;
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav a {
+  color: #b2e2f2;
+  text-decoration: none;
+  margin: 0 0.6rem;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 6rem 1.5rem 3rem;
+}
+
+section {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #333;
+  scroll-margin-top: 80px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  letter-spacing: 0.03rem;
+}
+
+p {
+  margin: 0.75rem 0;
+}
+
+/* Lists - consistent with body text */
+ul,
+ol {
+  font-size: 1.15rem;
+  color: #e0e0e0;
+  padding-left: 1.5rem;
+}
+
+img.logo {
+  width: 70px;
+  height: 70px;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+ul li,
+ol li {
+  margin-bottom: 0.5rem;
+}
+
+/* Roadmap Timeline */
+#roadmap ul {
+  padding-left: 1.5rem;
+  list-style: none;
+  border-left: 2px solid #444;
+  margin-left: 0;
+}
+
+#roadmap ul li {
+  margin-bottom: 1.8rem;
+  position: relative;
+  padding-left: 1.2rem;
+  color: #cccccc;
+}
+
+#roadmap ul li::before {
+  content: '';
+  position: absolute;
+  left: -0.55rem;
+  top: 0.3rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: #b2e2f2;
+  border-radius: 50%;
+}
+
+.subheader {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-top: 0.1rem;
+  margin-bottom: 1.8rem;
+  display: block;
+  line-height: 1.5;
+}
+
+footer {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  font-size: 0.95rem;
+  color: #c9dcdc;
+  border-top: 1px solid #333;
+}
+
+a {
+  color: #b2e2f2;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* === Next Iteration: Better Number Badge and Tighter Spacing === */
+.how-it-works-step {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.step-number {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #61a0ff;
+  background-color: #1b2e4a;
+  border-radius: 4px;
+  padding: 2px 8px;
+  margin-right: 0.5rem;
+  line-height: 1.4;
+}
+
+.step-content h3 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.step-content p {
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+/* ===== Responsive Hamburger Menu ===== */
+nav .nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 860px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+/* Menu toggle is hidden by default (desktop) */
+#menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: #b2e2f2;
+  cursor: pointer;
+}
+
+/* Menu default (desktop) */
+#menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+#menu li {
+  margin: 0 0.5rem;
+}
+
+/* ===== Mobile Styles ===== */
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: block;
+  }
+
+  nav .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  #menu.open {
+    display: flex;
+  }
+
+  #menu li {
+    margin: 0.5rem 1rem;
+  }
+}
+
+/* ===== Reset to Desktop explicitly for larger screens ===== */
+@media (min-width: 769px) {
+  nav .nav-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  #menu {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #menu li {
+    margin: 0 0.5rem;
+  }
+}

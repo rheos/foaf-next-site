@@ -1,103 +1,132 @@
-import Image from "next/image";
+'use client';
+
+import Nav from '../components/Nav';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import { useEffect } from 'react';
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  useEffect(() => {
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    const toggleMenu = () => {
+      if (menu) {
+        menu.style.display = menu.style.display === "block" ? "none" : "block";
+      }
+    };
+
+    if (toggle) {
+      toggle.addEventListener("click", toggleMenu);
+    }
+
+    return () => {
+      if (toggle) {
+        toggle.removeEventListener("click", toggleMenu);
+      }
+    };
+  }, []);
+
+  return (
+    <main>
+      <Nav />
+      <Header />
+
+      <section>
+        <h2>A New Infrastructure for Trust-Based Trade</h2>
+        <p className="subheader">
+          As centralized systems falter, FOAF helps communities exchange value directly. No banks. No middlemen. No cash required.
+        </p>
+      </section>
+
+      <section>
+        <h2>What Is FOAF?</h2>
+        <p>
+          FOAF (Friend of a Friend) is a decentralized protocol for value exchange rooted in trust.
+          It is not a marketplace or an app—it is the infrastructure that powers them.
+          FOAF enables people to trade goods, services, and credit through personal networks, using social trust instead of money.
+        </p>
+      </section>
+
+      <section>
+        <h2>How FOAF Works</h2>
+        <ul>
+          <li>Post something you offer or need</li>
+          <li>It spreads through your contact network</li>
+          <li>Credit flows across trust paths, and the app keeps track</li>
+        </ul>
+        <p>
+          No public listings. No wallet setup. Most users never touch tokens.
+          FOAF works quietly in the background, making trusted trade possible.
+        </p>
+      </section>
+
+      <section>
+        <h2>Why Now?</h2>
+        <ul>
+          <li>Rising costs and economic instability are pushing people to find alternatives</li>
+          <li>Trust in institutions is eroding</li>
+          <li>Volunteer-run exchange networks burn out and fade</li>
+          <li>Communities need tools built for real-world resilience</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Why It Matters</h2>
+        <p>
+          FOAF turns goodwill and social capital into a usable economic layer.
+          It lets us grow, share, and trade directly—without depending on fragile supply chains or extractive systems.
+        </p>
+      </section>
+
+      <section>
+        <h2>Our Mission</h2>
+        <p>
+          To build an infrastructure of trust that empowers people to trade, thrive, and adapt—together.
+        </p>
+      </section>
+
+      <section>
+        <h2>Who It’s For</h2>
+        <ul>
+          <li>Gardeners, makers, fixers, and doers</li>
+          <li>People who want to help their communities stay resilient</li>
+          <li>Anyone looking for ways to trade fairly and build lasting connections</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>First Use Case: GrowOperative</h2>
+        <p>
+          GrowOperative is our first live deployment of the FOAF protocol.
+          It helps gardeners and communities share surplus food through trust-based networks—no cash required.
+        </p>
+        <p>
+          This is just the beginning. FOAF can support any kind of trade—tools, skills, services, and more.
+        </p>
+        <p>
+          <a href="/growoperative/">Explore GrowOperative →</a>
+        </p>
+      </section>
+
+      <section>
+        <h2>Core Principles</h2>
+        <ul>
+          <li><strong>Local-first:</strong> Built for neighborhoods and bioregions</li>
+          <li><strong>Consent-based visibility:</strong> Listings are visible only through direct or second-degree contacts</li>
+          <li><strong>Credible neutrality:</strong> FOAF is infrastructure, not a brand or marketplace</li>
+          <li><strong>Forward-compatible:</strong> Starts with food, expands to services, logistics, and credit</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Get Started</h2>
+        <p><a href="/growoperative/">Explore GrowOperative</a> — our first live application</p>
+        <p><a href="/tokens/">Learn about FOAF and RHEO tokens</a> — governance and utility layers</p>
+        <p><a href="/whitepaper/">Read the FOAF Whitepaper</a></p>
+      </section>
+
+      <Footer />
+    </main>
   );
 }
