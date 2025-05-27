@@ -5,8 +5,9 @@
 /* Custom base styles */
 @layer base {
   :root {
-    --background: 214 41% 15%;
+    --background: 215 64% 16%;
     --foreground: 0 0% 88%;
+    --nav-header-bg: 210 69% 13%;
   }
 
   body {
@@ -33,8 +34,25 @@
   }
 
   /* Navigation styles */
+  nav, header {
+    display: block;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
   nav {
-    @apply bg-background/95 backdrop-blur-sm border-b border-foreground/10 z-50 w-full;
+    @apply bg-[hsl(var(--nav-header-bg))] backdrop-blur-sm border-b border-foreground/10 z-50;
+  }
+  header {
+    @apply bg-[hsl(var(--nav-header-bg))] py-8 px-4 mb-8 pt-16;
+    margin-top: 0 !important;
+  }
+  header > *:first-child {
+    margin-top: 0 !important;
   }
 
   @media (min-width: 769px) {
@@ -44,11 +62,22 @@
   }
 
   .nav-container {
-    @apply max-w-3xl mx-auto px-4 py-4 flex items-center justify-between;
+    @apply max-w-3xl mx-auto px-4 py-1 flex items-center justify-between min-h-0;
+  }
+
+  @media (min-width: 769px) {
+    .nav-container {
+      @apply py-4;
+    }
   }
 
   #menu-toggle {
-    @apply hidden text-3xl bg-transparent border-none text-blue-200 cursor-pointer p-2 rounded-md hover:bg-blue-900 transition;
+    @apply hidden text-3xl bg-transparent border-none text-blue-200 cursor-pointer rounded-md hover:bg-blue-900 transition p-0 m-0;
+    height: 48px;
+    width: 48px;
+    display: none;
+    align-items: center;
+    justify-content: center;
   }
 
   #menu {
@@ -64,23 +93,35 @@
   }
 
   @media (max-width: 768px) {
+    #menu-toggle {
+      @apply block;
+      display: flex;
+    }
     #menu {
       @apply hidden flex-col w-full mt-0 bg-background shadow-2xl border border-foreground/10 rounded-b-lg whitespace-normal absolute left-0 right-0 top-full z-50;
     }
     #menu.open {
       @apply flex;
     }
+    #menu li {
+      @apply pl-6 py-3 text-lg;
+    }
   }
 
   @media (min-width: 769px) {
-    nav .nav-container {
-      @apply flex-row items-center;
+    .nav-container {
+      @apply py-4;
+    }
+    #menu-toggle {
+      @apply hidden;
+      display: none;
     }
     #menu {
-      @apply flex-row justify-center static bg-transparent shadow-none border-none rounded-none;
+      @apply flex flex-row justify-center static bg-transparent shadow-none border-none rounded-none !important;
+      display: flex !important;
     }
     #menu li {
-      @apply mx-4 border-none bg-transparent p-0;
+      @apply mx-4 border-none bg-transparent p-0 pl-0 py-0 text-base;
     }
   }
 }

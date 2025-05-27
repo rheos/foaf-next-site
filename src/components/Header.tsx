@@ -2,18 +2,20 @@ import Image from 'next/image';
 
 export default function Header() {
   return (
-    <header className="flex items-center gap-4 mb-8 mt-12">
-      <Image
-        src="/logo.png"
-        alt="FOAF Foundation Logo"
-        width={48}
-        height={48}
-        className="w-12 h-12"
-      />
-      <div>
-        <h1 className="text-4xl font-bold mb-2">FOAF Foundation</h1>
-        <p className="text-lg text-foreground/80">Resilient Local Trade – Powered by Trust, Not Cash</p>
+    <header className="mb-8 mt-12">
+      <div className="flex items-center justify-center gap-4 md:-ml-[35px]">
+        <Image
+          src="/logo.png"
+          alt="FOAF Foundation Logo"
+          width={70}
+          height={70}
+          className="w-12 h-12 md:w-[70px] md:h-[70px]"
+        />
+        <h1 className="text-4xl font-bold">FOAF Foundation</h1>
       </div>
+      <p className="text-lg text-foreground/80 text-center mt-2 max-w-2xl mx-auto">
+        Decentralized trust infrastructure for community-scale value exchange
+      </p>
     </header>
   );
 }

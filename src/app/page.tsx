@@ -1,38 +1,10 @@
 'use client';
 
-import Nav from '../components/Nav';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import Section from '../components/Section';
-import { useEffect } from 'react';
 
 export default function Home() {
-  useEffect(() => {
-    const toggle = document.getElementById("menu-toggle");
-    const menu = document.getElementById("menu");
-
-    const toggleMenu = () => {
-      if (menu) {
-        menu.style.display = menu.style.display === "block" ? "none" : "block";
-      }
-    };
-
-    if (toggle) {
-      toggle.addEventListener("click", toggleMenu);
-    }
-
-    return () => {
-      if (toggle) {
-        toggle.removeEventListener("click", toggleMenu);
-      }
-    };
-  }, []);
-
   return (
     <main className="max-w-3xl mx-auto px-4 py-10">
-      <Nav />
-      <Header />
-
       <Section>
         <h2 className="section-heading">A New Infrastructure for Trust-Based Trade</h2>
         <p>
@@ -125,8 +97,6 @@ export default function Home() {
         <p><a href="/tokens/" className="content-link">Learn about FOAF and RHEO tokens</a> — governance and utility layers</p>
         <p><a href="/whitepaper/" className="content-link">Read the FOAF Whitepaper</a></p>
       </Section>
-
-      <Footer />
     </main>
   );
 }
