@@ -1,0 +1,42 @@
+# Type check and build on every PR, so a dependency bump has a real signal
+# instead of only a bot's opinion.
+#
+# Lint is deliberately absent, for two reasons. `next lint` on Next 14 looks
+# for an .eslintrc and does not recognise this repo's flat eslint.config.mjs,
+# so it drops into an interactive setup prompt and would hang a runner. And
+# running eslint directly reports 13 pre-existing errors on main, so the step
+# would land red. Both are worth fixing; neither belongs in the change that
+# introduces CI.
+name: Checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+concurrency:
+  group: checks-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    name: Checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v7
+
+      - name: Set up Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install (clean)
+        run: npm ci
+
+      - name: Type check
+        run: npx tsc --noEmit
+
+      - name: Build
+        run: npm run build
