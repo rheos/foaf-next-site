@@ -9,6 +9,16 @@ updates:
       interval: "weekly"
       day: "monday"
     open-pull-requests-limit: 3
+    ignore:
+      # TypeScript 7 is blocked twice over here, and neither block is ours.
+      # typescript-eslint refuses outright ("typescript-eslint does not
+      # support TS 7.0"; its declared peer is >=4.8.4 <6.1.0), and Next 14's
+      # build stops resolving the @/* path alias under it. Fixing the first
+      # error TS 7 reports, the untyped ./globals.css side-effect import,
+      # only uncovers those two. Retest when typescript-eslint ships TS 7
+      # support. Minor and patch still flow.
+      - dependency-name: "typescript"
+        update-types: ["version-update:semver-major"]
     groups:
       javascript-minor-and-patch:
         patterns: ["*"]
