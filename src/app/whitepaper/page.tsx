@@ -58,7 +58,7 @@ export default function WhitepaperPage() {
           <p>FOAF is designed to make trust-based trade as seamless as possible, even in the absence of money. The system follows a simple flow:</p>
           <ul className="list-disc pl-6 my-4 space-y-2">
             <li><strong>Post</strong> – A user lists something they need or want to offer.</li>
-            <li><strong>Propagate</strong> – The listing spreads through the user's contact network, appearing as if shared directly by each contact.</li>
+            <li><strong>Propagate</strong> – The listing spreads through the user&apos;s contact network, appearing as if shared directly by each contact.</li>
             <li><strong>Settle</strong> – The system routes value through trust paths. Settlement can be in mutual credit, cash, or in-kind and is transparently recorded.</li>
           </ul>
           <p>

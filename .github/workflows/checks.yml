@@ -1,12 +1,9 @@
-# Type check and build on every PR, so a dependency bump has a real signal
-# instead of only a bot's opinion.
+# Lint, type check and build on every PR, so a dependency bump has a real
+# signal instead of only a bot's opinion.
 #
-# Lint is deliberately absent, for two reasons. `next lint` on Next 14 looks
-# for an .eslintrc and does not recognise this repo's flat eslint.config.mjs,
-# so it drops into an interactive setup prompt and would hang a runner. And
-# running eslint directly reports 13 pre-existing errors on main, so the step
-# would land red. Both are worth fixing; neither belongs in the change that
-# introduces CI.
+# Lint runs eslint directly rather than through `next lint`: Next 14's wrapper
+# looks for an .eslintrc and does not recognise this repo's flat config, so it
+# drops into an interactive setup prompt and would hang a runner.
 name: Checks
 
 on:
@@ -34,6 +31,9 @@ jobs:
 
       - name: Install (clean)
         run: npm ci
+
+      - name: Lint
+        run: npm run lint
 
       - name: Type check
         run: npx tsc --noEmit
