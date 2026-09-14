@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, easeIn, easeOut } from 'framer-motion';
+import { motion, easeIn } from 'framer-motion';
 import { ReactNode } from 'react';
 import { useInView } from 'react-intersection-observer';
 

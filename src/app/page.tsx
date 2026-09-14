@@ -2,7 +2,6 @@
 
 import Section from '../components/Section';
 import AnimatedSection from '../components/AnimatedSection';
-import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -74,7 +73,7 @@ export default function Home() {
 
       <AnimatedSection>
         <Section>
-          <h2 className="section-heading">Who It's For</h2>
+          <h2 className="section-heading">Who It&apos;s For</h2>
           <ul className="content-list">
             <li>Gardeners, makers, fixers, and doers</li>
             <li>People who want to help their communities stay resilient</li>

@@ -30,7 +30,7 @@ export default function GrowOperativePage() {
           <h2 className="section-heading">How GrowOperative Works</h2>
           <ol className="badge-list">
             <li>
-              <p className="font-semibold text-lg mb-1">List What You're Offering</p>
+              <p className="font-semibold text-lg mb-1">List What You&apos;re Offering</p>
               <p>
                 Have too many tomatoes or fresh herbs? Post them in the app. Your listing begins within your contact
                 circle but can ripple outward as others share it through the network.
@@ -39,7 +39,7 @@ export default function GrowOperativePage() {
             <li>
               <p className="font-semibold text-lg mb-1">Your Listing Travels Through the Network</p>
               <p>
-                Anyone connected by trust can see your listing if it's passed along. That includes friends of friends
+                Anyone connected by trust can see your listing if it&apos;s passed along. That includes friends of friends
                 and beyond, depending on how far it travels. You stay connected to the chain of trust the whole way.
               </p>
             </li>
@@ -47,14 +47,14 @@ export default function GrowOperativePage() {
               <p className="font-semibold text-lg mb-1">Transactions Are Logged as Credit</p>
               <p>
                 When someone places a request and you accept, the transaction is recorded as a line of credit.
-                No cash is exchanged in the app. It isn't a direct trade either. The system just tracks the value that's owed.
+                No cash is exchanged in the app. It isn&apos;t a direct trade either. The system just tracks the value that&apos;s owed.
               </p>
             </li>
             <li>
               <p className="font-semibold text-lg mb-1">You Decide How to Settle It</p>
               <p>
                 You and the other person agree on how and when to settle the credit. It could be cash, something they offer later,
-                or any form of value you both accept. The app doesn't handle payment or enforce terms. It simply records the agreement.
+                or any form of value you both accept. The app doesn&apos;t handle payment or enforce terms. It simply records the agreement.
               </p>
             </li>
             <li>
@@ -76,13 +76,13 @@ export default function GrowOperativePage() {
             Chris, who is connected to Mia and also trusted by others, sees the post.
           </p>
           <p>
-            Chris's friends Ana and Jordan view the tomatoes in their app. They know the tomatoes originated with Mia
+            Chris&apos;s friends Ana and Jordan view the tomatoes in their app. They know the tomatoes originated with Mia
             but see that the requisition will flow through Chris. Ana requests one pound, Jordan requests two.
             Chris adds two pounds for himself and submits a five-pound requisition to Mia on behalf of the group.
           </p>
           <p>
             Mia accepts. Chris picks up the tomatoes and distributes them to Ana, Jordan, and himself. Ana and Jordan
-            do not see each other's participation or pricing. They only see that they are receiving tomatoes from Chris
+            do not see each other&apos;s participation or pricing. They only see that they are receiving tomatoes from Chris
             and that the source was Mia.
           </p>
           <p>
@@ -128,7 +128,7 @@ export default function GrowOperativePage() {
         <Section>
           <h2 className="section-heading">How It Is Different</h2>
           <ul className="list-disc list-inside space-y-2">
-            <li><strong>Unlike farmer's markets:</strong> GrowOperative works digitally through social networks. No stalls, vendors, or fixed locations</li>
+            <li><strong>Unlike farmer&apos;s markets:</strong> GrowOperative works digitally through social networks. No stalls, vendors, or fixed locations</li>
             <li><strong>Unlike food banks:</strong> It is not charity. It supports value exchange and mutual accountability</li>
             <li><strong>Unlike barter groups:</strong> No need for direct matches. Value flows through trust paths and is logged transparently</li>
             <li><strong>Unlike selling apps:</strong> Listings are private and scoped to your network</li>
