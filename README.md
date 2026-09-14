@@ -1,3 +1,9 @@
+> **Retired.** This repository is no longer maintained and serves no live site.
+> The FOAF Foundation website is now built from
+> [FOAF-Foundation/foaf-next-v2](https://github.com/FOAF-Foundation/foaf-next-v2),
+> which is what holds `foaf.foundation`, `foaf.ai` and `foaf.io`.
+> Kept public as a record of the 2025 implementation.
+
 # FOAF Foundation website
 
 This repository contains the 2025 Next.js implementation of the FOAF Foundation website. It explains FOAF's trust-based mutual-credit model, GrowOperative, the FOAF and RHEO token model, and the project roadmap.
